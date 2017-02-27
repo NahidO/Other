@@ -1,0 +1,161 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# La NASA a découvert un nouveau système solaire jumeau du nôtre, situé à seulement 39 années-lumières de la Terre. Mais combien de temps mettrait l'humanité pour aller sur une de ses planètes, en 2017 ?"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 57,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [],
+   "source": [
+    "navette = 14031 #vitesse de Juno en m/s\n",
+    "lumière = 299792458 #vitesse de la lumière en m/s\n",
+    "\n",
+    "#convertir mètres en km - plus facile à lire\n",
+    "def convert_meters(meters):\n",
+    "    km = meters/1000\n",
+    "    return km    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 70,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [],
+   "source": [
+    "juno_vs_célérité = navette/lumière*100"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "La navette Juno (la plus rapide du monde) évolue à 0.004% de la vitesse de la lumière."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 65,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [],
+   "source": [
+    "lumière_km = convert_meters(lumière) #la lumière en km/s\n",
+    "navette_km = convert_meters(navette) #la navette en km/s"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 66,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [],
+   "source": [
+    "année_lumière_km = lumière_km * 60 * 60 * 24 * 365"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "La lumière parcourt une distance de 9 454 254 955 488 kilomètres en une année."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 67,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [],
+   "source": [
+    "distance_trappist = 39 * année_lumière_km"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Trappist se situe à une distance de 368 715 943 264 031 kilomètres."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 68,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [],
+   "source": [
+    "année_navette = navette_km * 60 * 60 * 24 * 365"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "La navette Juno parcourt une distance de 442 481 615 kilomètres en une année."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 69,
+   "metadata": {
+    "collapsed": false
+   },
+   "outputs": [],
+   "source": [
+    "aller_sur_trappist = distance_trappist/année_navette"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# L'humanité mettrait 833 290 années pour aller dans le voisinage de Trappist. Sans compter le temps pour rechercher une planète habitable, y atterir, etc..."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "anaconda-cloud": {},
+  "kernelspec": {
+   "display_name": "Python [conda root]",
+   "language": "python",
+   "name": "conda-root-py"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.5.2"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 1
+}
